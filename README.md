@@ -49,6 +49,23 @@ npm run clean
 
 이 프로젝트는 최신 Next.js App Router를 사용하며, TypeScript와 Tailwind CSS로 구축되었습니다.
 
+## 📝 커밋 메시지 규칙
+
+모든 커밋 메시지는 **한글로 작성**해야 합니다.
+
+### 예시
+- ✅ "Badge 컴포넌트 추가"
+- ✅ "QR 생성기 기능 구현"
+- ✅ "UI 스타일 개선"
+- ❌ "Add Badge component"
+- ❌ "Implement QR generator"
+- ❌ "Improve UI styles"
+
+### 커밋 메시지 형식
+- 간결하고 명확하게 작성
+- 동사형으로 시작 (추가, 수정, 삭제, 개선 등)
+- 50자 이내로 작성 권장
+
 ## 📁 프로젝트 구조
 
 ```
