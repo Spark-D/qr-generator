@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QR Generator
 
-## Getting Started
+QR 코드 생성기 웹 애플리케이션입니다. Next.js 15와 React 19를 기반으로 구축되었습니다.
 
-First, run the development server:
+## 🚀 기술 스택
+
+- **Framework**: Next.js 15.5.2 (App Router)
+- **React**: 19.1.0
+- **TypeScript**: 5.9.2
+- **Styling**: Tailwind CSS 4.1.12
+- **Linting**: ESLint 9.34.0
+- **Build Tool**: Turbopack
+
+## 📦 설치 및 실행
+
+### 개발 서버 실행
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 결과를 확인하세요.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 기타 명령어
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# 프로덕션 빌드
+npm run build
 
-## Learn More
+# 프로덕션 서버 실행
+npm run start
 
-To learn more about Next.js, take a look at the following resources:
+# 린팅 검사
+npm run lint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 린팅 자동 수정
+npm run lint:fix
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 타입 체크
+npm run type-check
 
-## Deploy on Vercel
+# 빌드 캐시 정리
+npm run clean
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ 개발
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+페이지를 수정하려면 `src/app/page.tsx` 파일을 편집하세요. 파일을 편집하면 페이지가 자동으로 업데이트됩니다.
+
+이 프로젝트는 최신 Next.js App Router를 사용하며, TypeScript와 Tailwind CSS로 구축되었습니다.
+
+## 📁 프로젝트 구조
+
+```
+src/
+├── app/
+│   ├── globals.css      # 전역 스타일
+│   ├── layout.tsx       # 루트 레이아웃
+│   └── page.tsx         # 홈페이지
+```
+
+## 🚀 배포
+
+### Vercel (권장)
+
+Next.js 앱을 배포하는 가장 쉬운 방법은 [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)을 사용하는 것입니다.
+
+### 기타 플랫폼
+
+[Next.js 배포 문서](https://nextjs.org/docs/app/building-your-application/deploying)에서 더 자세한 정보를 확인하세요.
+
+## 📚 학습 자료
+
+Next.js에 대해 더 알아보려면 다음 자료를 참고하세요:
+
+- [Next.js 문서](https://nextjs.org/docs) - Next.js 기능과 API에 대해 알아보세요
+- [Next.js 학습](https://nextjs.org/learn) - 인터랙티브한 Next.js 튜토리얼
+
+[Next.js GitHub 저장소](https://github.com/vercel/next.js)를 확인해보세요 - 피드백과 기여를 환영합니다!
