@@ -1,0 +1,57 @@
+---
+globs: src/components/ui/*.tsx
+description: shadcn/ui 컴포넌트 개발 규칙
+---
+
+## shadcn/ui 컴포넌트 개발 규칙
+
+### 컴포넌트 구조 패턴
+```tsx
+import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
+import { cn } from "@/lib/utils"
+
+const componentVariants = cva(
+  "기본 클래스들",
+  {
+    variants: {
+      variant: {
+        default: "기본 스타일",
+        secondary: "보조 스타일",
+        // ... 기타 variants
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
+
+export interface ComponentProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof componentVariants> {}
+
+function Component({ className, variant, ...props }: ComponentProps) {
+  return (
+    <div className={cn(componentVariants({ variant }), className)} {...props} />
+  )
+}
+
+export { Component, componentVariants }
+```
+
+### 필수 패키지
+- `class-variance-authority`: variant 시스템
+- `clsx`: 조건부 클래스
+- `tailwind-merge`: 클래스 병합
+- `@radix-ui/react-slot`: 슬롯 컴포넌트
+
+### 스타일링 규칙
+- Tailwind CSS 클래스 사용
+- `cn()` 함수로 클래스 병합
+- variant 시스템으로 다양한 스타일 제공
+- 접근성 고려한 focus 스타일 포함
+
+### Export 규칙
+- 컴포넌트와 variants 모두 export
+- `src/components/index.ts`에 추가하여 중앙 관리

@@ -1,0 +1,31 @@
+---
+globs: *.tsx,*.ts
+description: TypeScript 및 React 컴포넌트 코딩 규칙
+---
+
+## TypeScript 및 React 컴포넌트 코딩 규칙
+
+### Import 규칙
+- 절대 경로 import 사용: `@/components/ui/button` 형식
+- 상대 경로 import 금지
+- React import는 `import * as React from "react"` 형식 사용
+
+### 컴포넌트 네이밍
+- 컴포넌트는 PascalCase 사용
+- page.tsx 파일의 컴포넌트는 반드시 "Page"로 명명
+- UI 컴포넌트는 기능명으로 명명 (Button, Badge, Input 등)
+
+### TypeScript 규칙
+- 모든 props는 interface로 정의
+- `React.HTMLAttributes` 확장하여 사용
+- `VariantProps`를 활용한 variant 시스템 구현
+
+### 스타일링 규칙
+- Tailwind CSS 클래스 사용
+- `cn()` 유틸리티 함수로 클래스 병합
+- `class-variance-authority`를 활용한 variant 시스템
+
+### 파일 구조
+- UI 컴포넌트는 `src/components/ui/` 디렉토리에 위치
+- 모든 컴포넌트는 `src/components/index.ts`에서 export
+- 유틸리티 함수는 `src/lib/utils.ts`에 위치

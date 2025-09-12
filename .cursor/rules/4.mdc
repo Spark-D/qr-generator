@@ -1,0 +1,33 @@
+---
+globs: src/app/**/*.tsx
+description: Next.js App Router 페이지 컴포넌트 규칙
+---
+
+## Next.js App Router 페이지 컴포넌트 규칙
+
+### 페이지 컴포넌트 구조
+- 모든 page.tsx 파일의 컴포넌트는 `Page`로 명명
+- 예시: `export default function Page() { ... }`
+
+### 메타데이터 설정
+- layout.tsx에서 전역 메타데이터 설정
+- 각 페이지별 메타데이터는 `export const metadata` 사용
+- 한국어 설정: `<html lang="ko">`
+
+### 스타일링 패턴
+- `min-h-screen` 클래스로 전체 화면 높이 설정
+- `flex items-center justify-center` 패턴으로 중앙 정렬
+- `text-center` 클래스로 텍스트 중앙 정렬
+
+### 컴포넌트 import
+- UI 컴포넌트는 `@/components/ui/` 경로에서 import
+- 예시: `import { Button } from "@/components/ui/button"`
+
+### 레이아웃 구조
+```tsx
+<div className="min-h-screen flex items-center justify-center p-8">
+  <div className="text-center">
+    {/* 페이지 내용 */}
+  </div>
+</div>
+```
