@@ -31,6 +31,22 @@ export interface QRCodeOptions {
   };
 }
 
+// WIFI QR 코드 데이터
+export interface WifiQRData {
+  ssid: string;
+  password: string;
+  security: 'WPA' | 'WEP' | 'nopass';
+  hidden: boolean;
+}
+
+// 폼 검증 에러 타입
+export interface FormErrors {
+  brandName?: string;
+  ssid?: string;
+  password?: string;
+  backgroundColor?: string;
+}
+
 // 카드 크기 상수
 export const CARD_DIMENSIONS = {
   WIDTH: 192, // 3:4 비율

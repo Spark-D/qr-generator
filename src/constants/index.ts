@@ -34,3 +34,4 @@ export const CARD_TEXT = {
   WIFI_ACCESS: 'WIFI 접속',
   BY_SPARK: 'by SPARK',
 } as const;
+
