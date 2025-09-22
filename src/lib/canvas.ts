@@ -1,5 +1,5 @@
-import { CARD_DIMENSIONS, CARD_TEXT } from '@/constants';
-import { WifiCardProps } from '@/types';
+import { CARD_TEXT } from '@/constants';
+import { WifiCardProps, CARD_DIMENSIONS } from '@/types';
 
 interface DrawCardOptions {
   canvas: HTMLCanvasElement;
